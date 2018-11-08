@@ -14,50 +14,57 @@ void draw() {
   shibuyaBackground();
   //move and show the bacteria
 }  
-class Crosswalk {     
-  //lots of java!
 
-  void shibuyaBackground() {
-    stroke(#FADE3F);
-    strokeWeight(5);
-    fill(#B4B4B4);
-    rect(625, 625, 300, 300, 125);
-    rect(625, -150, 300, 300, 125);
-    rect(-130, -150, 300, 300, 125);
-    rect(-130, 625, 300, 300, 125);
+void shibuyaBackground() {
+  stroke(#FADE3F);
+  strokeWeight(5);
+  fill(#B4B4B4);
+  rect(625, 625, 300, 300, 125);
+  rect(625, -150, 300, 300, 125);
+  rect(-130, -150, 300, 300, 125);
+  rect(-130, 625, 300, 300, 125);
 
-    stroke(#DED9D9);
-    for (int i = 0; i < 450; i+= 35) {
-      fill(#DED9D9);
-      rect (177 + i, 725, 18, 300);
-    }
-
-    for (int i = 0; i < 450; i+= 35) {
-      fill(#DED9D9);
-      rect (-225, 165 + i, 300, 20);
-    }
-
-    for (int i = 0; i < 450; i+= 35) {
-      fill(#DED9D9);
-      rect (177 + i, -225, 20, 300);
-    }
-
-    for (int i = 0; i < 450; i+= 35) {
-      fill(#DED9D9);
-      rect (725, 165 + i, 300, 20);
-    }
-
-    pushMatrix();
-    translate(218, 100);
-    rotate(44.8);
-    for (int i = 0; i < 675; i+= 41) {
-      fill(#DED9D9);
-      rect (0 + i, 0, 18, 150);
-    }
-    popMatrix();
+  stroke(#DED9D9);
+  for (int i = 0; i < 450; i+= 35) {
+    fill(#DED9D9);
+    rect (177 + i, 725, 18, 300);
   }
 
-  void move();
-  {
+  for (int i = 0; i < 450; i+= 35) {
+    fill(#DED9D9);
+    rect (-225, 165 + i, 300, 20);
+  }
+
+  for (int i = 0; i < 450; i+= 35) {
+    fill(#DED9D9);
+    rect (177 + i, -225, 20, 300);
+  }
+
+  for (int i = 0; i < 450; i+= 35) {
+    fill(#DED9D9);
+    rect (725, 165 + i, 300, 20);
+  }
+
+  pushMatrix();
+  translate(218, 100);
+  rotate(44.8);
+  for (int i = 0; i < 675; i+= 41) {
+    fill(#DED9D9);
+    rect (0 + i, 0, 18, 150);
+  }
+  popMatrix();
+} //end of shibuyaBackground..
+
+//Begin People Class
+class People {
+  int x_pos;
+  int y_pos; 
+
+  void show() {
+    translate(x_pos, y_pos);
+  }
+  void move() {
+    x_pos = x_pos+3;
+    y_pos = y_pos -1;
   }
 }
